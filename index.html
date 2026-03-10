@@ -44,19 +44,20 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 .domain-section{border-bottom:1px solid rgba(255,255,255,.06)}
 .domain-list{overflow:hidden;transition:max-height .3s ease, opacity .25s ease;opacity:1}
 .domain-list.collapsed{max-height:0 !important;opacity:0}
-.domain-hdr{display:flex;align-items:center;gap:6px;padding:9px 14px;cursor:pointer;user-select:none;font-size:.8125rem;font-weight:600;color:#c6c6c6;border-left:4px solid transparent;transition:background .15s}
+.domain-hdr{display:flex;align-items:center;gap:8px;padding:10px 14px;cursor:pointer;user-select:none;font-size:.8125rem;font-weight:600;color:#f4f4f4;border-left:4px solid transparent;border-bottom:1px solid rgba(255,255,255,.08);transition:background .15s}
 .domain-hdr:hover{background:rgba(255,255,255,.06)}
-.domain-hdr__name{flex:0 1 auto}
+.domain-hdr__name{flex:1}
 .domain-hdr__count{font-size:.6rem;background:rgba(255,255,255,.1);color:#8d8d8d;padding:1px 7px;border-radius:8px;font-weight:400}
-.domain-hdr__chev{margin-left:auto;font-size:.6rem;color:rgba(255,255,255,.4);transition:transform .2s}
-.domain-hdr__chev.collapsed{transform:rotate(-90deg)}
+.domain-hdr__chev{flex-shrink:0;color:rgba(255,255,255,.5);transition:transform .2s ease}
+.domain-hdr__chev.collapsed{transform:rotate(-180deg)}
 
-.nav-item{display:flex;align-items:center;gap:6px;padding:6px 14px 6px 26px;font-size:.75rem;cursor:pointer;color:rgba(255,255,255,.6);border-left:3px solid transparent;transition:all .12s}
-.nav-item:hover{background:rgba(255,255,255,.06);color:#fff}
-.nav-item.active{background:rgba(255,255,255,.08);color:#fff;border-left-color:#78a9ff}
-.nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.nav-item{display:flex;align-items:flex-start;gap:6px;padding:6px 14px 6px 26px;font-size:.75rem;cursor:pointer;color:#c6c6c6;border-left:3px solid transparent;transition:all .12s}
+.nav-item:hover{background:rgba(255,255,255,.06);color:#f4f4f4}
+.nav-item.active{background:rgba(255,255,255,.08);color:#f4f4f4;border-left-color:#78a9ff}
+.nav-num{min-width:16px;font-size:.75rem;font-weight:400;color:#8d8d8d;flex-shrink:0;text-align:right;line-height:1.3}
+.nav-item:hover .nav-num{color:#c6c6c6}
+.nav-item.active .nav-num{color:#78a9ff}
 .nav-label{flex:1;line-height:1.3}
-.nav-priority{font-size:.5625rem;color:rgba(255,255,255,.35);white-space:nowrap}
 
 /* Main */
 .main{flex:1;overflow-y:auto;padding:1.25rem;background:#e0e0e0}
@@ -184,237 +185,196 @@ ul li::before{content:'\2022';position:absolute;left:0;color:#002d9c}
     </div>
     <div class="sb-nav"><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#001d6c" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">C-Suite &amp; ABM</span>
         <span class="domain-hdr__count">3</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">C-Suite &amp; ABM</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-0" onclick="showCard(0,this)">
-          <span class="nav-dot" style="background:#001d6c"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Client Experience Playbook Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-1" onclick="showCard(1,this)">
-          <span class="nav-dot" style="background:#001d6c"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Executive Engagement Briefing Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-2" onclick="showCard(2,this)">
-          <span class="nav-dot" style="background:#001d6c"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">C-Suite Contact Accuracy &amp; Account Targeting Agent</span>
-          <span class="nav-priority">#3</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#002d9c" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">CSR</span>
         <span class="domain-hdr__count">3</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">CSR</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-3" onclick="showCard(3,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Grant Lifecycle Orchestrator Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-4" onclick="showCard(4,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">SkillsBuild Partner Onboarding &amp; Lifecycle Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-5" onclick="showCard(5,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Volunteer &amp; Giving Operations Agent</span>
-          <span class="nav-priority">#3</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#0043ce" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">IBMer Comms</span>
         <span class="domain-hdr__count">3</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">IBMer Comms</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-6" onclick="showCard(6,this)">
-          <span class="nav-dot" style="background:#0043ce"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Executive Communications Concierge Agent</span>
-          <span class="nav-priority">#1 (TOP PRIORITY)</span>
         </div><div class="nav-item" data-card="card-7" onclick="showCard(7,this)">
-          <span class="nav-dot" style="background:#0043ce"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">CEO/Executive Content Repository &amp; Intelligence Agent</span>
-          <span class="nav-priority">#2 (Foundation)</span>
         </div><div class="nav-item" data-card="card-8" onclick="showCard(8,this)">
-          <span class="nav-dot" style="background:#0043ce"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Communications Performance &amp; Benchmark Insights Agent</span>
-          <span class="nav-priority">#3</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#002d9c" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">Innovation Studio</span>
         <span class="domain-hdr__count">5</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">Innovation Studio</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-9" onclick="showCard(9,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Request Intake &amp; Client Nomination Agent</span>
-          <span class="nav-priority">#1 (of 5)</span>
         </div><div class="nav-item" data-card="card-10" onclick="showCard(10,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Agenda Creation &amp; SME Coordination Agent</span>
-          <span class="nav-priority">#2 (TOP PRIORITY)</span>
         </div><div class="nav-item" data-card="card-11" onclick="showCard(11,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Demo &amp; Content Discovery Agent</span>
-          <span class="nav-priority">#3 (of 5)</span>
         </div><div class="nav-item" data-card="card-12" onclick="showCard(12,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">4</span>
           <span class="nav-label">CTEBA Approval &amp; Registration Agent</span>
-          <span class="nav-priority">#4 (of 5)</span>
         </div><div class="nav-item" data-card="card-13" onclick="showCard(13,this)">
-          <span class="nav-dot" style="background:#002d9c"></span>
+          <span class="nav-num">5</span>
           <span class="nav-label">Feedback, Follow-Up &amp; Pipeline Reconciliation Agent</span>
-          <span class="nav-priority">#5 (of 5)</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#4589ff" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">Intl. &amp; Ext. Comms</span>
         <span class="domain-hdr__count">2</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">Intl. &amp; Ext. Comms</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-14" onclick="showCard(14,this)">
-          <span class="nav-dot" style="background:#4589ff"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Media Monitoring &amp; Press Release Orchestration Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-15" onclick="showCard(15,this)">
-          <span class="nav-dot" style="background:#4589ff"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Campaign Narrative Orchestration Agent</span>
-          <span class="nav-priority">#2</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#78a9ff" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">MMAPI Analytics</span>
         <span class="domain-hdr__count">3</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">MMAPI Analytics</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-16" onclick="showCard(16,this)">
-          <span class="nav-dot" style="background:#78a9ff"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Funnel Health Monitoring Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-17" onclick="showCard(17,this)">
-          <span class="nav-dot" style="background:#78a9ff"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Quarterly Planning Co-Pilot Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-18" onclick="showCard(18,this)">
-          <span class="nav-dot" style="background:#78a9ff"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">New Market Opportunity Scout Agent</span>
-          <span class="nav-priority">#3</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#a6c8ff" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">Select Demand</span>
         <span class="domain-hdr__count">3</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">Select Demand</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-19" onclick="showCard(19,this)">
-          <span class="nav-dot" style="background:#a6c8ff"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Content &amp; Journey Orchestration Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-20" onclick="showCard(20,this)">
-          <span class="nav-dot" style="background:#a6c8ff"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Demand Funnel Analyzer Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-21" onclick="showCard(21,this)">
-          <span class="nav-dot" style="background:#a6c8ff"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Persona Sense Agent</span>
-          <span class="nav-priority">#3</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#0353e9" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">Ecosystems</span>
         <span class="domain-hdr__count">5</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">Ecosystems</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-22" onclick="showCard(22,this)">
-          <span class="nav-dot" style="background:#0353e9"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">MDF Request and Co-Marketing Brief Processing Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-23" onclick="showCard(23,this)">
-          <span class="nav-dot" style="background:#0353e9"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Partner Activation and Onboarding Orchestration Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-24" onclick="showCard(24,this)">
-          <span class="nav-dot" style="background:#0353e9"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Account and Territory Intelligence Agent</span>
-          <span class="nav-priority">#3</span>
         </div><div class="nav-item" data-card="card-25" onclick="showCard(25,this)">
-          <span class="nav-dot" style="background:#0353e9"></span>
+          <span class="nav-num">4</span>
           <span class="nav-label">Co-Branded Campaign and Content Production Agent</span>
-          <span class="nav-priority">#4</span>
         </div><div class="nav-item" data-card="card-26" onclick="showCard(26,this)">
-          <span class="nav-dot" style="background:#0353e9"></span>
+          <span class="nav-num">5</span>
           <span class="nav-label">Partner Performance Intelligence Agent</span>
-          <span class="nav-priority">#5</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#0050e6" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">PMM</span>
         <span class="domain-hdr__count">11</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">PMM</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-27" onclick="showCard(27,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">PMM-to-Market Activation Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-28" onclick="showCard(28,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Competitive Intelligence &amp; Claims Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-29" onclick="showCard(29,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Messaging, Narrative &amp; Pressure-Testing Agent</span>
-          <span class="nav-priority">#3</span>
         </div><div class="nav-item" data-card="card-30" onclick="showCard(30,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">4</span>
           <span class="nav-label">Launch Readiness &amp; GTM Brief Agent</span>
-          <span class="nav-priority">#4</span>
         </div><div class="nav-item" data-card="card-31" onclick="showCard(31,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">5</span>
           <span class="nav-label">Customer Insight &amp; Persona Synthesis Agent</span>
-          <span class="nav-priority">#5</span>
         </div><div class="nav-item" data-card="card-32" onclick="showCard(32,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">6</span>
           <span class="nav-label">Industry AI Research Intelligence Agent</span>
-          <span class="nav-priority">#6</span>
         </div><div class="nav-item" data-card="card-33" onclick="showCard(33,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">7</span>
           <span class="nav-label">Competitive Signal Monitoring &amp; Alert Agent</span>
-          <span class="nav-priority">#7</span>
         </div><div class="nav-item" data-card="card-34" onclick="showCard(34,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">8</span>
           <span class="nav-label">Customer Insight Harvesting Agent</span>
-          <span class="nav-priority">#8</span>
         </div><div class="nav-item" data-card="card-35" onclick="showCard(35,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">9</span>
           <span class="nav-label">Public Market Intelligence Agent</span>
-          <span class="nav-priority">#9</span>
         </div><div class="nav-item" data-card="card-36" onclick="showCard(36,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">10</span>
           <span class="nav-label">Regulatory &amp; Compliance Research Agent</span>
-          <span class="nav-priority">#10</span>
         </div><div class="nav-item" data-card="card-37" onclick="showCard(37,this)">
-          <span class="nav-dot" style="background:#0050e6"></span>
+          <span class="nav-num">11</span>
           <span class="nav-label">Thought Leadership Trend Synthesis Agent</span>
-          <span class="nav-priority">#11</span>
         </div></div>
     </div><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#1192e8" onclick="toggleDomain(this)">
-        <span class="domain-hdr__name">T&amp;O</span>
         <span class="domain-hdr__count">3</span>
-        <span class="domain-hdr__chev collapsed">&#9660;</span>
+        <span class="domain-hdr__name">T&amp;O</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
       </div>
       <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-38" onclick="showCard(38,this)">
-          <span class="nav-dot" style="background:#1192e8"></span>
+          <span class="nav-num">1</span>
           <span class="nav-label">Program Budget Optimization &amp; Scenario Planning Agent</span>
-          <span class="nav-priority">#1</span>
         </div><div class="nav-item" data-card="card-39" onclick="showCard(39,this)">
-          <span class="nav-dot" style="background:#1192e8"></span>
+          <span class="nav-num">2</span>
           <span class="nav-label">Infrastructure Budget &amp; Workforce Planning Agent</span>
-          <span class="nav-priority">#2</span>
         </div><div class="nav-item" data-card="card-40" onclick="showCard(40,this)">
-          <span class="nav-dot" style="background:#1192e8"></span>
+          <span class="nav-num">3</span>
           <span class="nav-label">Risk &amp; Compliance Continuous Monitoring Agent</span>
-          <span class="nav-priority">#3</span>
         </div></div>
     </div></div>
   </div>
