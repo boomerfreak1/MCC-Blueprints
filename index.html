@@ -193,7 +193,7 @@ ul li::before{content:'\2022';position:absolute;left:0;color:#002d9c}
       <div class="sb-title">Workflow Blueprints</div>
       <div class="sb-sub">AI Transformation — All Domains</div>
       <div class="sb-bottom-row">
-        <div class="sb-stats"><div><span>10</span> Domains</div><div><span>41</span> Workflows</div></div>
+        <div class="sb-stats"><div><span>11</span> Domains</div><div><span>46</span> Workflows</div></div>
         <div class="sb-sort">
           <button class="sb-sort-btn active" id="sortInterview" onclick="sortDomains('interview')" title="Interview order">
             <span class="sort-tooltip">Interview Order</span>
@@ -400,13 +400,35 @@ ul li::before{content:'\2022';position:absolute;left:0;color:#002d9c}
           <span class="nav-num">3</span>
           <span class="nav-label">Risk &amp; Compliance Continuous Monitoring Agent</span>
         </div></div>
+    </div><div class="domain-section">
+      <div class="domain-hdr" style="border-left-color:#002d9c" onclick="toggleDomain(this)">
+        <span class="domain-hdr__count">5</span>
+        <span class="domain-hdr__name">Named Demand Strategy</span>
+        <svg class="domain-hdr__chev collapsed" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"/></svg>
+      </div>
+      <div class="domain-list collapsed" style="display:none;max-height:0"><div class="nav-item" data-card="card-41" onclick="showCard(41,this)">
+          <span class="nav-num">1</span>
+          <span class="nav-label">Buyer and Account Intelligence Agent</span>
+        </div><div class="nav-item" data-card="card-42" onclick="showCard(42,this)">
+          <span class="nav-num">2</span>
+          <span class="nav-label">Demand Planning Orchestration Agent</span>
+        </div><div class="nav-item" data-card="card-43" onclick="showCard(43,this)">
+          <span class="nav-num">3</span>
+          <span class="nav-label">ABM Account Intelligence and Campaign Activation Agent</span>
+        </div><div class="nav-item" data-card="card-44" onclick="showCard(44,this)">
+          <span class="nav-num">4</span>
+          <span class="nav-label">Customer Story and Reference Curation Agent</span>
+        </div><div class="nav-item" data-card="card-45" onclick="showCard(45,this)">
+          <span class="nav-num">5</span>
+          <span class="nav-label">Campaign Performance Intelligence and Optimization Agent</span>
+        </div></div>
     </div></div>
   </div>
   <div class="main" id="main">
     <div class="welcome" id="welcome">
       <h2>Select a Workflow</h2>
       <p>Choose a domain and workflow from the left panel to view its full blueprint card.</p>
-      <div class="tags"><span class="tag blue">10 Domains</span><span class="tag cyan">41 Workflows</span></div>
+      <div class="tags"><span class="tag blue">11 Domains</span><span class="tag cyan">46 Workflows</span></div>
     </div>
     <div class="card-panel" id="card-0" style="display:none">
   <div class="card-header" style="background:#002d9c">
@@ -7176,6 +7198,836 @@ Broad: Sales teams who consume competitive positioning; proposal teams who need 
     <span>IBM Consulting / &copy; 2026 IBM Corporation | MCC &amp; IBM Confidential</span>
     <span>Risk &amp; Compliance Continuous Monitoring Agent &nbsp;|&nbsp; Workflow Blueprint</span>
   </div>
+</div><div class="card-panel" id="card-41" style="display:none">
+  <div class="card-header" style="background:#002d9c">
+    <div class="card-title">Buyer and Account Intelligence Agent</div>
+    <div class="card-badge">Named Demand Strategy</div>
+    <div class="card-desc">Continuously assembles and refreshes unified buyer and account profiles by joining 1P behavioral data, firmographic and technographic signals, and 3P intent data. Dynamically re-se</div>
+    <div class="card-pill">#1</div>
+  </div>
+  <button class="gap-arrow gap-arrow--right" onclick="toggleGaps(41,'gaps')" title="View Discovery Gaps (17)">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M22 16L12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"/></svg>
+        </button>
+  <button class="gap-arrow gap-arrow--left hidden" onclick="toggleGaps(41,'card')" title="Back to Blueprint">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M10 16l10-10 1.4 1.4-8.6 8.6 8.6 8.6L20 26z"/></svg>
+        </button>
+  <div class="card-content-wrapper">
+    <div class="card-body" id="card-body-41">
+      <div class="cols4">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Current State &amp; Pain Points</div>
+          <div class="tile-body">
+            <div class="sh">How It Works Today</div><ul><li>Continuously assembles and refreshes unified buyer and account profiles by joining 1P behavioral data, firmographic and technographic signals, and 3P intent data. Dynamically re-segments accounts into intent and need clusters as signals change, surfaces updated ICP scores to demand planners and field marketers, and flags accounts crossing intent thresholds for campaign activation.</li></ul>
+            <div class="sh">Primary Friction Points</div><ul><li>☑ Manual data aggregation: Dominant pain point. Profile assembly is &#x27;the most manual and fragmented step in the Named Demand workflow&#x27; (screenshot). Vanina: &#x27;70% of my team&#x27;s time&#x27; is spent optimizing and delivering buying groups. Claudia: Insights Navigator data is &#x27;incredible&#x27; but &#x27;manual and takes more time than it should.&#x27; Pulling growth cohort lists &#x27;takes more work than it probably should.&#x27;</li><li>☑ Disconnected data sources: Data exists across ISC, EPM, Tableau, Bombora, content syndication agencies, and vendor tools — but is siloed. Shanti: &#x27;the data exists, but it&#x27;s all in a different place... everything resides in silos.&#x27; Claudia: &#x27;you have to go to different parts of it.&#x27;</li><li>☑ Data quality / entity mismatches: Critical issue for child entity mapping. Shanti&#x27;s example: same CTO appears as three different entities across ISC, EPM, and LinkedIn. Content syndication agencies submit duplicate responses for same person/account. Sachiko: &#x27;we cannot really tell with the sellers how surely we can say that this is the real buying group.&#x27;</li><li>☑ Cross-system integration barriers: Bamboo Box vendor integration was blocked due to API access approval requirements. Multiple systems require separate API connections (Marketo, LinkedIn, etc.). Shanti: &#x27;in IBM we don&#x27;t get approval so easily.&#x27;</li><li>☑ Lack of child entity visibility: Parent entities have strong data coverage but child entities are &#x27;clubbed under&#x27; parent level. Shanti: dashboard &#x27;only does everything at a parent entity level.&#x27; Sales needs child-entity-level pipeline and relationship data to prioritize.</li><li>☑ Inconsistent sales data capture: David Gerken: &#x27;not uniform data capture — many sales interactions aren&#x27;t being captured in ISC or Salesloft.&#x27; Priscilla: &#x27;the good ones will go in and log an activity... not everyone will do that.&#x27;</li><li>☑ No buying group confidence scoring: Team cannot validate whether four individuals from the same GBG constitute a real buying group or are just scattered contacts. Sachiko: &#x27;very difficult for us to tell the sellers with confidence.&#x27;</li><li>☐ Account prioritization based on intuition: [NOT DISCUSSED - recommend follow-up] — Shanti noted child entity prioritization by sales is &#x27;based on very high level what they know about those accounts. There is nothing data backing.&#x27;</li><li>☐ Approval process bottlenecks: Vendor integrations (Bamboo Box, content syndication API connections) require approvals that delay or block capability deployment.</li><li>Most Painful Area: The intersection of data fragmentation and entity resolution. The team consistently described a scenario where the data they need exists but is scattered across 6+ disconnected systems with inconsistent entity hierarchies. Shanti&#x27;s concrete example — a single CTO appearing as three different entities across ISC, EPM, and LinkedIn — illustrates a systemic problem that makes buying group formation unreliable and account-level reporting at the child entity level nearly impossible. Vanina&#x27;s estimate that 70% of team time goes to this area quantifies the scale of the pain.</li></ul>
+            <div class="sh">Volume / Scale</div><ul><li>Eliminate the manual data assembly step that currently precedes every planning cycle and every ABM campaign targeting exercise. Vanina Marcote estimated her team spends ~70% of their time on buying group optimization and delivery — this agent would replace the recurring data preparation burden and make account intelligence a continuous input rather than a periodic output.</li></ul>
+            <div class="sh">Key Stakeholders</div><ul><li>Claudia Masseo — Named Demand Strategy lead, growth cohort definition</li><li>Vanina Marcote — Buying group optimization, account-level execution</li><li>Vijaysanthi (Shanti) Ramanathan — India/South Asia market demand strategy, child entity mapping</li><li>Priscilla Kim — Global demand strategy leadership, sales-marketing integration</li><li>Sachiko Tsuchiya — Japan market demand strategy, buying group confidence</li><li>Romy / Ravi (Insights Navigator team) — Tab 360 / Tableau data owners (mentioned by Claudia)</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Future State: What AI Does</div>
+          <div class="tile-body">
+            <div class="sh">AI-Enabled Workflow</div><ul><li>Data Ingestion &amp; Unification: Agent pulls 1P behavioral data from ISC/EPM, 3P intent signals (Bombora), firmographic and technographic data from Insights Navigator (Tab 360/Tableau), and content syndication response data from paid media agencies. Resolves entity mismatches across parent/child hierarchies.</li><li>Entity Resolution &amp; Hierarchy Mapping: Agent reconciles duplicate and mismatched records across systems (e.g., Shanti&#x27;s example: same CTO tagged as &#x27;Aditya Birla Capital&#x27; in LinkedIn, &#x27;Aditya Birla Renewable Solar Limited&#x27; in ISC, and &#x27;Aditya Birla Management&#x27; in EPM). Maps child entities to parent accounts with confidence scoring. <span class="risk">[GAP] What is the current scale of entity mismatches? How many named accounts have known child-entity data quality issues?</span></li><li>ICP Scoring &amp; Segmentation: Agent computes and refreshes Ideal Customer Profile scores using combined signals. Dynamically segments accounts into growth cohorts based on intent patterns, engagement history, install base, and pipeline status.</li><li>Buying Group Assembly: Agent identifies individuals within accounts engaging with IBM content, maps them to buying group roles (minimum 4 per UT17 level), and scores buying group completeness. Flags groups needing additional role coverage.</li><li>Threshold Alerting: When accounts cross intent or engagement thresholds, agent surfaces alerts to demand planners and field marketers with recommended next actions.</li><li>Output Distribution: Unified account profiles, buying group status, and prioritized account lists are published to demand planning tools, AJO/AEP for activation, and field marketing dashboards. <span class="risk">[GAP] What is the target delivery format — dashboard, automated email digest, AEP audience push, or all of the above?</span></li><li>Continuous Refresh: Agent monitors for new signals and re-scores continuously rather than on planning cycle cadence, transforming account intelligence from periodic to always-on.</li><li>☑ Insight generation: Core capability. Agent synthesizes 1P behavioral, 3P intent, firmographic, and technographic signals into unified account intelligence with ICP scores, buying group completeness metrics, and growth cohort recommendations. Replaces manual Insights Navigator lookups and cross-system data aggregation.</li><li>☑ Drafting / content generation: [NOT APPLICABLE] — This agent produces data outputs and recommendations, not content drafts.</li><li>☑ Risk scoring / pre-review: Agent scores buying group confidence levels (addressing Sachiko&#x27;s concern about inability to tell sellers &#x27;with confidence&#x27; whether groups are real buying groups vs. scattered individuals). Flags entity mismatches and data quality issues before they propagate to activation.</li><li>☑ Executive summarization: Generates account-level and cohort-level summary views for demand planners, replacing manual dashboard assembly.</li><li>☑ Workflow automation: Automates the end-to-end data assembly pipeline that currently precedes every planning cycle and ABM campaign targeting exercise — the single most time-consuming manual step in the Named Demand workflow.</li><li>Hypothesis: An AI agent that continuously unifies and scores account data across IBM&#x27;s fragmented system landscape would eliminate the largest manual bottleneck in Named Demand Strategy. By replacing the periodic, labor-intensive data assembly cycle with a continuously refreshed intelligence layer, the agent would free demand planners to focus on strategy and activation rather than data wrangling. The buying group confidence scoring directly addresses the team&#x27;s inability to provide sellers with reliable buying group intelligence.</li><li>Conversational Refinement Note: The team&#x27;s discussion heavily emphasized entity resolution challenges (child entity mismatches across ISC, EPM, and LinkedIn) and buying group confidence. The Adobe capability review underway with David Gerken&#x27;s team may overlap with some audience segmentation functions — the agent design should be validated against Adobe AEP/AJO capabilities to avoid duplication.</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Business Impact <span class="biz-pill" style="background:#24a148;color:#fff">High</span></div>
+          <div class="tile-body">
+            <p class="narr">HIGH. Profile assembly is the primary bottleneck preceding every planning cycle and ABM activation. Vanina: &#x27;70% of my team&#x27;s time&#x27; on buying group work. Claudia: growth cohort list pulling &#x27;takes more work than it probably should.&#x27; Eliminating this bottleneck would transform Named Demand from react</p>
+            <div class="sh">Future Extensions &amp; Reusability</div><ul><li>Client Experience Playbook (C-Suite &amp; ABM domain): The unified account intelligence this agent produces is the same &#x27;dynamic view of everything we know about an account&#x27; that David Gerken described as a cross-domain need</li><li>Select Demand Strategy: Similar account intelligence and persona segmentation needs; shared data sources (ISC, Bombora, EPM)</li><li>ABM programs across all 19 MCC domains: Any domain running account-based programs benefits from unified account profiles</li><li>Sales enablement: Sellers across all geos would consume buying group intelligence and account scores</li><li>Content &amp; Messaging Strategy: Account-level insight feeds into content personalization and messaging strategy</li><li>Adobe stack optimization: Outputs feed directly into AEP/AJO for activation, making those platform investments more productive</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Feasibility (3/5) <span class="biz-pill" style="background:#f1c21b;color:#161616">Medium</span></div>
+          <div class="tile-body">
+            <div class="sh">Assessment</div><ul><li>MODERATE. Priscilla: &#x27;80% of the data exists&#x27; — the challenge is integration and entity resolution, not data availability. Adobe AEP/AJO review underway may provide foundational infrastructure. Entity resolution across ISC/EPM/LinkedIn is the hardest technical challenge. <span class="risk">[GAP] What is the current state of AEP deployment and data ingestion? Is there a unified identity graph?</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot-row">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Technical Requirements</div>
+          <div class="tile-body"><div class="tech-grid">
+            <div><div class="sh">Data Sources</div><ul><li>ISC: Account/contact data, sales activity logging</li><li>EPM: Marketing performance data, Tableau dashboards</li><li>Insights Navigator / Tab 360: Account intelligence, firmographic/technographic data</li><li>Bombora: 3P intent data signals</li><li>Content Syndication Agencies: Paid media response data, buying group formation</li><li>AEP / AJO: Audience activation, journey orchestration</li><li>CJA: Customer journey analytics</li><li>Faris IQ (vendor): Outside-in competitive intelligence</li><li>Bamboo Box (vendor): AI-based ABM dashboard, client journey visualization</li><li>Marketo: Email campaign execution</li><li>Salesforce: CRM, pipeline data</li><li>Salesloft: Sales engagement tracking</li></ul>
+              <div class="sh">System / Integration Requirements</div><ul><li>Adobe partnership deep dive: Assess AEP/AJO/CJA capabilities against account intelligence requirements (David Gerken: &#x27;kicking off with Adobe&#x27;)</li><li>Insights Navigator / Tab 360 team engagement: Claudia recommended talking to Romy and Ravi to understand current capabilities and data architecture</li><li>Sales leadership alignment: Define data capture requirements and buying group definitions per business unit</li></ul>
+            </div>
+            <div><div class="sh">Candidate Vendors / Tools</div><ul><li>3P intent data vendor review: Assess Bombora coverage and evaluate Faris IQ and Bamboo Box capabilities</li><li>CIO / IT Security: API access approvals for vendor integrations (previously blocking Bamboo Box)</li><li>New Tech Requirements</li></ul>
+              <div class="sh">Other Dependencies &amp; Open Items</div><ul><li>Adobe stack assessment: First two workflows (buying group + unified account) may be &#x27;encompassed by the work we would do with Adobe&#x27; per David Gerken — agent design must align with and extend Adobe ca</li><li>API access approvals: Bamboo Box integration was blocked by IBM security/procurement approvals. Similar constraints likely apply to other vendor API connections.</li><li>Data quality baseline: Entity resolution requires a clean baseline of parent/child account hierarchies — current state has significant mismatches (&#x27;the data for the child entities is so different in e</li><li>Sales behavior change: &#x27;80% of data exists&#x27; but 20% depends on seller logging discipline (Priscilla: &#x27;not everyone will do that&#x27;) — agent accuracy is bounded by data completeness</li><li>Buying group target definitions: Business units will &#x27;soon start getting buying group targets by each business unit&#x27; — definitions (UT17 level, 4-person minimum) must be finalized before agent can sco</li><li>Content syndication guardrails: Need deduplication rules to prevent same persona/account from being targeted by multiple agencies simultaneously (Shanti flagged this in India)</li><li>Cross-domain dependency: David Gerken&#x27;s &#x27;client experience playbook&#x27; concept spans multiple domains — this agent&#x27;s output is a key input to that cross-domain initiative</li></ul>
+            </div>
+          </div></div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">KPIs &amp; Success Metrics</div>
+          <div class="tile-body kpi-sec">
+            <ul><li>Questions from the Transcript</li><li>How do we integrate sales/pipeline data into marketing intelligence without waiting for universal seller adoption of CRM logging? (Priscilla)</li><li>Can we provide child-entity-level buying group and pipeline data when current dashboards only operate at parent entity level? (Shanti)</li></ul>
+            <div class="impact-box">
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 1,1 1,18 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Growth Impact</div><div class="imp-desc">Client Experience Playbook (C-Suite &amp; ABM domain): The unified account intellige</div></div>
+              </div>
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 0,1 18,35 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Productivity Impact</div><div class="imp-desc">Eliminate the manual data assembly step that currently prece</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-gaps" id="card-gaps-41" style="display:none">
+      <div class="gaps-header">
+        <div class="gaps-title-row">
+          <span class="gaps-title">Discovery Gaps</span>
+          <span class="gaps-count-pill">17 gaps</span>
+        </div>
+        <div class="gaps-subtitle">All identified gaps for this workflow requiring follow-up investigation or resolution</div>
+      </div>
+      <div class="gaps-table-wrap">
+        <table class="gaps-table">
+          <thead>
+            <tr>
+              <th class="gt-num">#</th>
+              <th class="gt-desc">Gap Description</th>
+              <th class="gt-type">Gap Type</th>
+              <th class="gt-next">Recommended Next Step</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+              <td class="gap-num">1</td>
+              <td class="gap-desc">Who are the specific sales leaders responsible for named account prioritization in each geo?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">2</td>
+              <td class="gap-desc">What is the current data refresh cadence for 1P behavioral data in ISC/EPM? Is it real-time, daily, or batch?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">3</td>
+              <td class="gap-desc">Who owns the 3P intent data contracts (Bombora, etc.) and what is the current coverage of named accounts?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">4</td>
+              <td class="gap-desc">What is the current scale of entity mismatches? How many named accounts have known child-entity data quality issues?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">5</td>
+              <td class="gap-desc">What is the target delivery format — dashboard, automated email digest, AEP audience push, or all of the above?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">6</td>
+              <td class="gap-desc">Which geos have the most complete data vs. the largest gaps?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">7</td>
+              <td class="gap-desc">Can ISC/EPM teams provide an audit of entity hierarchy accuracy?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">8</td>
+              <td class="gap-desc">Current data refresh cadence for 1P behavioral data in ISC/EPM unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage ISC/EPM platform teams to document data refresh schedules and assess real-time feed feasibility</td>
+            </tr><tr>
+              <td class="gap-num">9</td>
+              <td class="gap-desc">3P intent data coverage across named accounts not quantified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Audit Bombora coverage against named account universe; evaluate supplemental 3P sources</td>
+            </tr><tr>
+              <td class="gap-num">10</td>
+              <td class="gap-desc">Scale of entity mismatches across parent/child hierarchies unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Request ISC/EPM entity hierarchy accuracy audit; quantify records with known mismatches</td>
+            </tr><tr>
+              <td class="gap-num">11</td>
+              <td class="gap-desc">Bamboo Box API access approval status unclear</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage CIO/IT Security to revisit API access requirements and approval process</td>
+            </tr><tr>
+              <td class="gap-num">12</td>
+              <td class="gap-desc">Target delivery format for unified account intelligence not defined</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Workshop with demand planners and field marketers to define optimal output formats</td>
+            </tr><tr>
+              <td class="gap-num">13</td>
+              <td class="gap-desc">Specific sales leaders responsible for named account prioritization not identified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage sales leadership to map account ownership and prioritization authority by geo</td>
+            </tr><tr>
+              <td class="gap-num">14</td>
+              <td class="gap-desc">Total Named Demand Strategy headcount and FTE allocation unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Gather headcount data from HR/finance to quantify automation impact</td>
+            </tr><tr>
+              <td class="gap-num">15</td>
+              <td class="gap-desc">Number of geos/markets running named demand programs not documented</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Survey all geos to map named demand program scope and staffing</td>
+            </tr><tr>
+              <td class="gap-num">16</td>
+              <td class="gap-desc">Salesloft/ISC interaction logging completeness unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Assess sales interaction capture rate to understand data completeness boundary</td>
+            </tr><tr>
+              <td class="gap-num">17</td>
+              <td class="gap-desc">AEP deployment status and unified identity graph availability unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage Adobe platform team to assess current AEP deployment and identity resolution capabilities</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" style="background:#002d9c">
+    <span>IBM Consulting / &copy; 2026 IBM Corporation | MCC &amp; IBM Confidential</span>
+    <span>Buyer and Account Intelligence Agent &nbsp;|&nbsp; Workflow Blueprint</span>
+  </div>
+</div><div class="card-panel" id="card-42" style="display:none">
+  <div class="card-header" style="background:#002d9c">
+    <div class="card-title">Demand Planning Orchestration Agent</div>
+    <div class="card-badge">Named Demand Strategy</div>
+    <div class="card-desc">On planning cycle trigger, collects and synthesizes all planning inputs including historicals, pipeline data, macro signals, capacity constraints, and financial targets into a stru</div>
+    <div class="card-pill">#2</div>
+  </div>
+  <button class="gap-arrow gap-arrow--right" onclick="toggleGaps(42,'gaps')" title="View Discovery Gaps (12)">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M22 16L12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"/></svg>
+        </button>
+  <button class="gap-arrow gap-arrow--left hidden" onclick="toggleGaps(42,'card')" title="Back to Blueprint">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M10 16l10-10 1.4 1.4-8.6 8.6 8.6 8.6L20 26z"/></svg>
+        </button>
+  <div class="card-content-wrapper">
+    <div class="card-body" id="card-body-42">
+      <div class="cols4">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Current State &amp; Pain Points</div>
+          <div class="tile-body">
+            <div class="sh">How It Works Today</div><ul><li>On planning cycle trigger, collects and synthesizes all planning inputs including historicals, pipeline data, macro signals, capacity constraints, and financial targets into a structured demand plan draft. Allocates budget and target recommendations across channels, geos, and teams based on historical performance and current pipeline signals. Routes the draft for review and approval, tracks stakeholder sign-off, and publishes the final plan to the relevant systems.</li></ul>
+            <div class="sh">Primary Friction Points</div><ul><li>☑ Manual planning input collection: Primary pain. Geo market inputs currently collected via email and Excel spreadsheets. Claudia: &#x27;it&#x27;s the most manual process.&#x27; Every planning cycle begins with weeks of data collection before strategic analysis can begin.</li><li>☑ Inconsistent forecasting methodology: Priscilla: current IPA forecasting is &#x27;not based on any sort of predictive or AI-enabled methodology, it&#x27;s based on what the person&#x27;s feeling is.&#x27; Australia vs. Japan vs. Spain all forecast differently — &#x27;maybe that&#x27;s OK because there are country nuances, but as we move towards optimizing... we need to be thoughtful about how we predict.&#x27;</li><li>☑ Disconnected performance data: Historical performance, pipeline status, and financial targets live in separate systems (EPM, ISC, Salesforce, IPA) requiring manual cross-referencing before plans can be drafted.</li><li>☐ Slow approval cycles: [NOT DISCUSSED - recommend follow-up] — Plan routing and approval process not detailed in transcript.</li><li>☑ No predictive forecasting: Team acknowledged forecasting is experience-based rather than data-driven. David Gerken noted attribution work by David Bush could help but is not yet integrated into planning workflow.</li><li>☑ Geo-global alignment friction: Priscilla described extensive meeting cadences to collect market feedback. &#x27;We do a lot of meetings in IBM&#x27; — feedback collection for planning is time-consuming and asynchronous.</li><li>☐ Mid-cycle replanning burden: [NOT DISCUSSED - recommend follow-up] — Frequency and effort of mid-cycle adjustments not covered.</li><li>☐ Budget allocation optimization: [NOT DISCUSSED - recommend follow-up] — Current budget allocation methodology not detailed.</li><li>☐ Marketing-sales forecast alignment: Priscilla: &#x27;we all forecast pipeline and win revenue in a very inconsistent way between the markets, between the teams, between the brand.&#x27; No unified forecasting standard.</li><li>Most Painful Area: The convergence of manual input collection and non-predictive forecasting. The planning cycle begins with a labor-intensive data gathering phase where teams across geos submit inputs via email and Excel, followed by manual synthesis into a plan. The forecasts embedded in these plans are based on individual judgment rather than historical patterns or predictive models. Priscilla&#x27;s example of the IPA tool — where marketers manually input pipeline and revenue forecasts based on &#x27;feeling&#x27; — captures the core issue: the planning process is both slow (manual inputs) and unreliable (non-predictive outputs).</li></ul>
+            <div class="sh">Volume / Scale</div><ul><li>Compress the planning cycle timeline and allow the team to spend more time on strategic allocation decisions rather than manual data assembly. The planning cycle is the primary unit of work for the Named Demand function, and its input phase is the single largest source of manual effort.</li></ul>
+            <div class="sh">Key Stakeholders</div><ul><li>Claudia Masseo — Named Demand Strategy lead, budget allocation decisions</li><li>Vanina Marcote — Growth cohort planning, buying group targets</li><li>Priscilla Kim — Global demand strategy, geo-market alignment, forecast methodology</li><li>Vijaysanthi (Shanti) Ramanathan — India/South Asia market planning, child entity allocation</li><li>Sachiko Tsuchiya — Japan market planning, campaign launch coordination</li><li>Finance / IPA tool owners — Forecast input and pipeline prediction. <span class="risk">[GAP] Who owns the IPA tool and what is their role in the planning cycle?</span></li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Future State: What AI Does</div>
+          <div class="tile-body">
+            <div class="sh">AI-Enabled Workflow</div><ul><li>Planning Trigger &amp; Input Collection: On cycle start, agent collects historical performance data, current pipeline status, financial targets, capacity constraints, and macro market signals from ISC, EPM, IPA, and Salesforce.</li><li>Geo &amp; Market Input Aggregation: Agent solicits and aggregates inputs from geo markets (priority industries, account focus areas, capacity). Currently done via &#x27;email or Excel&#x27; (Claudia). <span class="risk">[GAP] How many geos submit planning inputs and what is the typical turnaround time?</span></li><li>Draft Plan Generation: Agent synthesizes inputs into a structured demand plan with budget allocation recommendations across channels, geos, and teams. Uses historical performance patterns and current pipeline signals to inform allocations.</li><li>Target Setting &amp; Forecasting: Agent generates pipeline and win revenue forecasts using historical attribution data and performance patterns. Addresses Priscilla&#x27;s concern that current forecasting is &#x27;not based on any sort of predictive or AI-enabled methodology&#x27; but rather individual judgment.</li><li>Stakeholder Review &amp; Routing: Draft plan is routed to relevant stakeholders for review and approval. Agent tracks sign-off status and escalates delays.</li><li>Plan Publication &amp; System Distribution: Approved plan is published to relevant execution systems (Marketo, AJO, paid media platforms) and geo teams for activation.</li><li>Continuous Monitoring &amp; Reforecast: Agent monitors plan performance against targets and triggers mid-cycle reforecast recommendations when significant deviations are detected.</li><li>☑ Insight generation: Agent synthesizes historical performance, pipeline data, and macro signals into planning recommendations. Addresses Priscilla&#x27;s call for more data-driven planning: &#x27;if we&#x27;re going to spend so much time looking at optimization, we also need to be really thoughtful about how we predict and forecast.&#x27;</li><li>☑ Drafting / content generation: Generates structured demand plan drafts with budget allocations, channel mix recommendations, and target setting. Replaces manual plan assembly.</li><li>☑ Risk scoring / pre-review: Identifies allocation risks — channels or geos where historical performance suggests targets may be unrealistic. Flags capacity constraints against plan ambitions.</li><li>☑ Anomaly detection: Detects mid-cycle deviations from plan and triggers reforecast recommendations. Identifies outlier performance patterns across geos.</li><li>☑ Executive summarization: Generates planning cycle summaries for leadership review, including forecast confidence levels and key assumption documentation.</li><li>☑ Workflow automation: Automates the end-to-end planning input collection, synthesis, and distribution process that currently consumes the early weeks of every planning cycle.</li><li>Hypothesis: An AI-driven planning orchestration agent would transform the demand planning cycle from a weeks-long manual data collection and synthesis exercise into a rapid, data-driven process. By automating input aggregation, applying predictive analytics to forecast generation, and orchestrating the approval and distribution workflow, the agent would compress cycle time and improve forecast accuracy. The current state — where pipeline forecasts are based on individual judgment rather than data-driven methodology — represents a significant opportunity for AI-enabled improvement.</li><li>Conversational Refinement Note: Priscilla specifically called out IPA forecast methodology as an area for improvement. David Gerken connected this to David Bush&#x27;s attribution work, which could inform predictive forecasting. The agent design should incorporate attribution-derived patterns where available.</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Business Impact <span class="biz-pill" style="background:#24a148;color:#fff">High</span></div>
+          <div class="tile-body">
+            <p class="narr">HIGH. The planning cycle is &#x27;the primary unit of work&#x27; for Named Demand (screenshot). Compressing cycle time means faster time-to-activation for campaigns. Improved forecast accuracy means better budget allocation and more credible marketing contribution metrics.</p>
+            <div class="sh">Future Extensions &amp; Reusability</div><ul><li>Select Demand Strategy: Same planning cycle structure with similar data integration needs</li><li>PMM (Software, Infrastructure, Consulting): Campaign planning and budget allocation workflows share similar patterns</li><li>Content &amp; Messaging Strategy: Content planning cycles could use similar input aggregation and approval routing</li><li>All 19 MCC domains: Any domain with cyclical planning processes benefits from automated input collection and synthesis</li><li>Attribution / Analytics (David Bush team): Predictive forecasting component creates a feedback loop with attribution data</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Feasibility (3/5) <span class="biz-pill" style="background:#f1c21b;color:#161616">Medium</span></div>
+          <div class="tile-body">
+            <div class="sh">Assessment</div><ul><li>MODERATE. Requires integration with IPA, EPM, ISC, and Salesforce for input data. Predictive forecasting layer requires historical attribution data (David Bush team dependency). Plan routing/approval is a standard workflow automation pattern. <span class="risk">[GAP] Is historical attribution data available in a structured format that could feed a predictive model?</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot-row">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Technical Requirements</div>
+          <div class="tile-body"><div class="tech-grid">
+            <div><div class="sh">Data Sources</div><ul><li>IPA: Forecast input, pipeline/revenue predictions</li><li>EPM: Marketing performance data, historical trends</li><li>ISC: Account data, pipeline status</li><li>Salesforce: Pipeline data, opportunity stages</li><li>Tableau: Performance dashboards, reporting</li><li>AJO / AEP: Journey activation, audience targeting</li><li>Marketo: Email campaign execution</li><li>Excel / Email: Current geo input collection method</li></ul>
+              <div class="sh">System / Integration Requirements</div><ul><li>David Bush attribution team: Assess available attribution data for predictive forecasting model</li><li>IPA tool owners: Understand current forecast input/output architecture and integration options</li><li>Finance stakeholders: Align on forecast methodology standardization requirements</li></ul>
+            </div>
+            <div><div class="sh">Candidate Vendors / Tools</div><ul><li>Geo market planning leads: Document current input formats and approval workflows</li><li>New Tech Requirements</li><li>Planning data aggregation layer: Connects EPM, ISC, Salesforce, IPA into unified planning input</li></ul>
+              <div class="sh">Other Dependencies &amp; Open Items</div><ul><li>Attribution data availability: Predictive forecasting depends on David Bush team&#x27;s attribution models producing structured, accessible data — this is an external dependency</li><li>IPA tool integration: Current forecast tool may not support API-based input or have the flexibility for AI-generated forecasts</li><li>Geo market buy-in: Replacing email/Excel input with a structured portal requires change management across all markets</li><li>Forecast standardization politics: Priscilla acknowledged &#x27;maybe that&#x27;s OK because there are country nuances&#x27; — standardization may face resistance from geos with established methodologies</li><li>Adobe platform dependency: Plan outputs feed into AJO/AEP activation — Adobe capability assessment must be complete before downstream integration is designed</li><li>Cross-domain initiative overlap: David Gerken positioned attribution work as a cross-domain initiative — this agent must align with that broader effort</li></ul>
+            </div>
+          </div></div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">KPIs &amp; Success Metrics</div>
+          <div class="tile-body kpi-sec">
+            <ul><li>Questions from the Transcript</li><li>How can we achieve consistent forecasting methodology across geos while respecting local market nuances? (Priscilla)</li><li>Can attribution data from David Bush&#x27;s team be integrated into the IPA forecasting workflow? (David Gerken)</li></ul>
+            <div class="impact-box">
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 1,1 1,18 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Growth Impact</div><div class="imp-desc">Select Demand Strategy: Same planning cycle structure with similar data integrat</div></div>
+              </div>
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 0,1 18,35 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Productivity Impact</div><div class="imp-desc">Compress the planning cycle timeline and allow the team to s</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-gaps" id="card-gaps-42" style="display:none">
+      <div class="gaps-header">
+        <div class="gaps-title-row">
+          <span class="gaps-title">Discovery Gaps</span>
+          <span class="gaps-count-pill">12 gaps</span>
+        </div>
+        <div class="gaps-subtitle">All identified gaps for this workflow requiring follow-up investigation or resolution</div>
+      </div>
+      <div class="gaps-table-wrap">
+        <table class="gaps-table">
+          <thead>
+            <tr>
+              <th class="gt-num">#</th>
+              <th class="gt-desc">Gap Description</th>
+              <th class="gt-type">Gap Type</th>
+              <th class="gt-next">Recommended Next Step</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+              <td class="gap-num">1</td>
+              <td class="gap-desc">Who owns the IPA tool and what is their role in the planning cycle?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">2</td>
+              <td class="gap-desc">What is the current planning cycle duration from data collection start to plan publication?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">3</td>
+              <td class="gap-desc">How many stakeholders must sign off on a demand plan before publication?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">4</td>
+              <td class="gap-desc">How many geos submit planning inputs and what is the typical turnaround time?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">5</td>
+              <td class="gap-desc">What are the specific stages and handoffs in the current planning cycle?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">6</td>
+              <td class="gap-desc">What attribution models are currently in production and what data do they produce?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">7</td>
+              <td class="gap-desc">Current planning cycle duration unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Map end-to-end planning cycle with timeline from data collection start to plan publication</td>
+            </tr><tr>
+              <td class="gap-num">8</td>
+              <td class="gap-desc">IPA tool ownership and architecture not documented</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage IPA tool owners to understand current capabilities and integration options</td>
+            </tr><tr>
+              <td class="gap-num">9</td>
+              <td class="gap-desc">Number of stakeholders in planning approval process unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Document approval workflow with all required sign-offs</td>
+            </tr><tr>
+              <td class="gap-num">10</td>
+              <td class="gap-desc">Number of geos submitting planning inputs and turnaround times not quantified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Survey geo planning leads on current input process and timeline</td>
+            </tr><tr>
+              <td class="gap-num">11</td>
+              <td class="gap-desc">Historical attribution data availability for predictive modeling unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage David Bush team to inventory available attribution data and assess API accessibility</td>
+            </tr><tr>
+              <td class="gap-num">12</td>
+              <td class="gap-desc">Planning cycle count per year and FTE participation not quantified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Document planning cadence and resource allocation per cycle</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" style="background:#002d9c">
+    <span>IBM Consulting / &copy; 2026 IBM Corporation | MCC &amp; IBM Confidential</span>
+    <span>Demand Planning Orchestration Agent &nbsp;|&nbsp; Workflow Blueprint</span>
+  </div>
+</div><div class="card-panel" id="card-43" style="display:none">
+  <div class="card-header" style="background:#002d9c">
+    <div class="card-title">ABM Account Intelligence and Campaign Activation Agent</div>
+    <div class="card-badge">Named Demand Strategy</div>
+    <div class="card-desc">For a defined set of named accounts, pulls account activity signals, competitive intelligence, and buyer journey stage indicators, generates a prioritized account action list with </div>
+    <div class="card-pill">#3</div>
+  </div>
+  <button class="gap-arrow gap-arrow--right" onclick="toggleGaps(43,'gaps')" title="View Discovery Gaps (13)">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M22 16L12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"/></svg>
+        </button>
+  <button class="gap-arrow gap-arrow--left hidden" onclick="toggleGaps(43,'card')" title="Back to Blueprint">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M10 16l10-10 1.4 1.4-8.6 8.6 8.6 8.6L20 26z"/></svg>
+        </button>
+  <div class="card-content-wrapper">
+    <div class="card-body" id="card-body-43">
+      <div class="cols4">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Current State &amp; Pain Points</div>
+          <div class="tile-body">
+            <div class="sh">How It Works Today</div><ul><li>For a defined set of named accounts, pulls account activity signals, competitive intelligence, and buyer journey stage indicators, generates a prioritized account action list with recommended campaign plays, drafts account-specific content and messaging variants, and routes activation triggers to the appropriate field marketing team or seller. Connects competitive threat mapping to real-time tactical adjustments rather than treating them as separate planning exercises.</li></ul>
+            <div class="sh">Primary Friction Points</div><ul><li>☑ Manual account list building: Claudia: &#x27;we&#x27;re in a world where maybe we could simply say we&#x27;re looking for accounts that have this install and have done XYZ — download the list, send it into Marketo and send the email. And that&#x27;s just not where we are today.&#x27; Current process is manual, multi-step, multi-system.</li><li>☑ Disconnected competitive intelligence: Faris IQ outside-in data not integrated with IBM&#x27;s internal signals. Competitive threat mapping is treated as a separate exercise from campaign planning.</li><li>☑ Episodic vs. continuous activation: ABM execution is campaign-cycle-driven rather than signal-driven. Account signals change continuously but activation is batched.</li><li>☐ Field marketing routing gaps: [NOT DISCUSSED - recommend follow-up] — How activation recommendations are currently communicated to field marketing teams was not detailed.</li><li>☑ Growth cohort identification complexity: Claudia: &#x27;pulling the list itself takes more work than it probably should&#x27; for growth cohorts. Requires manual cross-referencing of install base, engagement patterns, and opportunity data.</li><li>☑ Next best action intelligence gap: Vanina: team needs &#x27;what is our next best action or what is our next role&#x27; recommendations at the account level but &#x27;we don&#x27;t have the intelligence for doing that yet.&#x27;</li><li>☑ Content syndication deduplication: Shanti: same accounts targeted by 3 agencies with same assets in India — &#x27;there is no guardrail to protect&#x27; against duplicate outreach to same persona.</li><li>☑ Sales data integration gap: Priscilla: &#x27;I&#x27;d love to see how we can draw sales or business information to just make our plan a lot more compelling.&#x27; Pipeline status and seller productivity gaps not integrated into marketing activation decisions.</li><li>☐ Account plan access: Priscilla: account plans are &#x27;the classic example&#x27; of valuable intelligence that exists in unstructured format and is &#x27;not in a mineable, consistent data format.&#x27;</li><li>Most Painful Area: The gap between intelligence and activation. The team has access to good data sources (Insights Navigator, intent signals, engagement data) but no automated pipeline from insight to action. Claudia&#x27;s description of the ideal — &#x27;something that triggers next best actions and then the execution&#x27; — contrasts sharply with today&#x27;s manual process of pulling lists, cross-referencing systems, and routing via email. Vanina&#x27;s statement that &#x27;we don&#x27;t have the intelligence for doing that yet&#x27; at the account level captures the core gap.</li></ul>
+            <div class="sh">Volume / Scale</div><ul><li>Make ABM execution systematic rather than episodic across a large account universe, while connecting competitive signals to tactical plays in a way that currently requires manual synthesis. Shift from periodic campaign planning to continuous, signal-driven account activation.</li></ul>
+            <div class="sh">Key Stakeholders</div><ul><li>Claudia Masseo — Growth cohort definition, ABM strategy, Faris IQ vendor evaluation</li><li>Vanina Marcote — Account-level execution, buying group engagement</li><li>Vijaysanthi (Shanti) Ramanathan — India market ABM execution, child entity activation</li><li>Priscilla Kim — Global ABM strategy, sales-marketing integration</li><li>Field marketing teams (geo-level) — Activation execution recipients</li><li>Sales teams — Account plan owners, pipeline intelligence providers</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Future State: What AI Does</div>
+          <div class="tile-body">
+            <div class="sh">AI-Enabled Workflow</div><ul><li>Signal Monitoring: Agent continuously monitors account activity signals across 1P engagement data (email, web, events), 3P intent (Bombora), competitive intelligence (Faris IQ), and pipeline movement (Salesforce/ISC).</li><li>Account Scoring &amp; Prioritization: Agent scores accounts based on engagement intensity, buying group completeness, pipeline stage, and competitive threat level. Generates prioritized activation list with rationale.</li><li>Campaign Play Recommendation: Based on account status and signals, agent recommends specific campaign plays (e.g., CFO roundtable, content syndication push, field event). Matches account needs to available campaign assets and channels.</li><li>Content &amp; Messaging Drafting: Agent drafts account-specific content variants and messaging recommendations based on account firmographics, industry, engagement history, and competitive context. <span class="risk">[GAP] What is the current content personalization capability? How many message variants does the team typically produce per campaign?</span></li><li>Activation Routing: Agent routes activation triggers to the appropriate field marketing team or seller based on account ownership, geo, and campaign type. Includes recommended next actions and supporting intelligence.</li><li>Competitive Threat Integration: Agent connects competitive intelligence (Faris IQ outside-in data, market signals) to tactical campaign adjustments in real-time rather than as separate planning exercises.</li><li>Performance Feedback Loop: Agent tracks activation outcomes and feeds results back into scoring and recommendation models for continuous improvement.</li><li>☑ Insight generation: Core capability. Agent synthesizes account signals across multiple sources to generate actionable account intelligence and campaign play recommendations. Addresses Claudia&#x27;s vision: &#x27;there would be something that triggers — these accounts are clearly showing similar patterns... here are the next best actions.&#x27;</li><li>☑ Drafting / content generation: Agent drafts account-specific content variants and messaging recommendations tailored to industry, persona, competitive context, and engagement stage.</li><li>☑ Risk scoring / pre-review: Scores competitive threat levels and flags accounts at risk of competitive displacement based on Faris IQ and other signals.</li><li>☑ Anomaly detection: Detects unusual engagement patterns (sudden drop-off, competitive signal spikes) and triggers proactive outreach recommendations.</li><li>☑ Orchestration / routing: Routes activation triggers to appropriate field marketing teams and sellers based on account ownership and recommended play type.</li><li>☑ Executive summarization: Generates account-level and cohort-level activation summaries for global and geo leadership.</li><li>☑ Workflow automation: Automates the signal-to-activation pipeline that currently requires manual cross-referencing of multiple data sources, manual list building, and manual routing to field teams.</li><li>Hypothesis: An ABM activation agent would transform Named Demand from periodic, campaign-driven account marketing to continuous, signal-driven activation. By connecting competitive intelligence directly to tactical campaign plays and automating the routing to field teams, the agent would make ABM execution systematic at scale. Claudia&#x27;s vision — &#x27;almost all of it could be automated at some point... something that triggers next best actions&#x27; — describes an achievable near-term state where AI handles signal processing, recommendation, and routing while humans validate and execute.</li><li>Conversational Refinement Note: This workflow bridges Workflows 1 (intelligence) and 2 (planning) by translating unified account intelligence into account-level activation. The team identified it as a &#x27;Team Workflow (micro) / Workflow (macro)&#x27; indicating it can start as account-level micro-activations and scale to full macro workflow. Claudia flagged Faris IQ as a key vendor for outside-in competitive data that would differentiate this agent.</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Business Impact <span class="biz-pill" style="background:#24a148;color:#fff">High</span></div>
+          <div class="tile-body">
+            <p class="narr">HIGH. ABM at named account scale requires account-specific intelligence and activation speed that manual processes cannot sustain across a large account universe (screenshot). Systematic ABM execution would directly increase pipeline contribution and buying group formation rates.</p>
+            <div class="sh">Future Extensions &amp; Reusability</div><ul><li>C-Suite Experience &amp; ABM domain: Client Experience Playbook workflow has identical account intelligence and activation requirements</li><li>Select Demand Strategy: Persona Sense and Content &amp; Journey Orchestration workflows share signal-to-activation patterns</li><li>Content &amp; Messaging Strategy: Campaign play library and content variant generation reusable across all ABM programs</li><li>Field marketing teams across all geos: Standardized activation format benefits every market</li><li>Sales enablement: Seller-facing recommendations reusable across all account-based selling motions</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Feasibility (4/5) <span class="biz-pill" style="background:#24a148;color:#fff">High</span></div>
+          <div class="tile-body">
+            <div class="sh">Assessment</div><ul><li>MODERATE-HIGH. Builds on Workflow 1 (account intelligence) outputs. AJO/AEP provide activation infrastructure. Competitive intelligence integration (Faris IQ) requires new vendor connection. Signal-to-recommendation logic is a well-understood ML/AI pattern. <span class="risk">[GAP] Is there an existing recommendation engine or ML pipeline that could be extended for campaign play recommendations?</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot-row">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Technical Requirements</div>
+          <div class="tile-body"><div class="tech-grid">
+            <div><div class="sh">Data Sources</div><ul><li>ISC: Account data, contact relationships, engagement history</li><li>Salesforce: Pipeline data, seller activity, account plans</li><li>Faris IQ: Outside-in competitive intelligence</li><li>Bombora: 3P intent data signals</li><li>AJO / AEP: Journey orchestration, audience activation</li><li>Marketo: Email campaign execution</li><li>LinkedIn: Paid media activation, social signals</li><li>Insights Navigator / Tab 360: Account intelligence, firmographics</li><li>Content syndication agencies: Paid media execution</li></ul>
+              <div class="sh">System / Integration Requirements</div><ul><li>Faris IQ evaluation: Deep dive into competitive intelligence capabilities and integration requirements</li><li>Adobe AJO/AEP team: Assess signal-to-activation orchestration capabilities within the platform</li><li>Field marketing leads across geos: Document current activation receipt and execution workflows</li></ul>
+            </div>
+            <div><div class="sh">Candidate Vendors / Tools</div><ul><li>Content &amp; Messaging Strategy: Define campaign play library and content variant requirements</li><li>New Tech Requirements</li><li>Signal processing engine: Multi-source signal ingestion and account-level scoring</li></ul>
+              <div class="sh">Other Dependencies &amp; Open Items</div><ul><li>Workflow 1 dependency: This agent consumes the unified account intelligence that Workflow 1 produces — must be deployed after or in parallel with Workflow 1</li><li>Adobe platform readiness: AJO/AEP must be sufficiently deployed to receive activation signals and orchestrate journeys</li><li>Faris IQ procurement: Competitive intelligence integration requires vendor evaluation, procurement, and API integration — timeline uncertain</li><li>Content library readiness: Campaign play recommendations require a structured library of available plays and content assets</li><li>Content syndication agency coordination: Deduplication requires governance across multiple agencies, especially in markets like India with 3 concurrent agencies</li><li>Sales org alignment: Seller-facing recommendations must align with sales methodology and account plan structures</li></ul>
+            </div>
+          </div></div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">KPIs &amp; Success Metrics</div>
+          <div class="tile-body kpi-sec">
+            <ul><li>Questions from the Transcript</li><li>How do we match outside-in competitive intelligence (Faris IQ) with internal engagement data to create a complete activation picture? (Claudia)</li><li>How do we integrate seller productivity gaps and pipeline status into campaign activation decisions? (Priscilla)</li></ul>
+            <div class="impact-box">
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 1,1 1,18 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Growth Impact</div><div class="imp-desc">C-Suite Experience &amp; ABM domain: Client Experience Playbook workflow has identic</div></div>
+              </div>
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 1,1 1,18 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Productivity Impact</div><div class="imp-desc">Make ABM execution systematic rather than episodic across a </div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-gaps" id="card-gaps-43" style="display:none">
+      <div class="gaps-header">
+        <div class="gaps-title-row">
+          <span class="gaps-title">Discovery Gaps</span>
+          <span class="gaps-count-pill">13 gaps</span>
+        </div>
+        <div class="gaps-subtitle">All identified gaps for this workflow requiring follow-up investigation or resolution</div>
+      </div>
+      <div class="gaps-table-wrap">
+        <table class="gaps-table">
+          <thead>
+            <tr>
+              <th class="gt-num">#</th>
+              <th class="gt-desc">Gap Description</th>
+              <th class="gt-type">Gap Type</th>
+              <th class="gt-next">Recommended Next Step</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+              <td class="gap-num">1</td>
+              <td class="gap-desc">Who owns the content/messaging strategy function that feeds ABM campaign plays?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">2</td>
+              <td class="gap-desc">How many named accounts are in the active ABM universe across all geos?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">3</td>
+              <td class="gap-desc">What is the current cadence for ABM campaign refreshes — quarterly, monthly, or event-driven?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">4</td>
+              <td class="gap-desc">What is the current content personalization capability? How many message variants does the team typically produce per campaign?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">5</td>
+              <td class="gap-desc">Is there a documented campaign play library or is play selection ad hoc?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">6</td>
+              <td class="gap-desc">Content/messaging strategy function ownership for ABM not identified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Identify content strategy stakeholders who feed campaign play creation</td>
+            </tr><tr>
+              <td class="gap-num">7</td>
+              <td class="gap-desc">Total named accounts in active ABM universe unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Aggregate named account counts across all geos and business units</td>
+            </tr><tr>
+              <td class="gap-num">8</td>
+              <td class="gap-desc">Current ABM campaign refresh cadence not documented</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Survey ABM program managers on activation frequency and cycle structure</td>
+            </tr><tr>
+              <td class="gap-num">9</td>
+              <td class="gap-desc">Content personalization capabilities and variant production rates unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Assess current content production workflow and variant capacity</td>
+            </tr><tr>
+              <td class="gap-num">10</td>
+              <td class="gap-desc">Campaign play library existence and documentation unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Inventory existing campaign plays and assess documentation quality</td>
+            </tr><tr>
+              <td class="gap-num">11</td>
+              <td class="gap-desc">Content syndication agency global management and dedup process unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage paid media team to document agency coordination and dedup rules</td>
+            </tr><tr>
+              <td class="gap-num">12</td>
+              <td class="gap-desc">Field marketing team count and activation response time not measured</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Survey field marketing leads on current activation workflow and SLAs</td>
+            </tr><tr>
+              <td class="gap-num">13</td>
+              <td class="gap-desc">Account plan format and mineability unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Assess Salesforce account plan structure for data extraction feasibility</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" style="background:#002d9c">
+    <span>IBM Consulting / &copy; 2026 IBM Corporation | MCC &amp; IBM Confidential</span>
+    <span>ABM Account Intelligence and Campaign Activation Agent &nbsp;|&nbsp; Workflow Blueprint</span>
+  </div>
+</div><div class="card-panel" id="card-44" style="display:none">
+  <div class="card-header" style="background:#002d9c">
+    <div class="card-title">Customer Story and Reference Curation Agent</div>
+    <div class="card-badge">Named Demand Strategy</div>
+    <div class="card-desc">Monitors the IBM customer story library and external signals including press releases, case studies, and analyst coverage for new or updated references relevant to defined solution</div>
+    <div class="card-pill">#4</div>
+  </div>
+  <button class="gap-arrow gap-arrow--right" onclick="toggleGaps(44,'gaps')" title="View Discovery Gaps (14)">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M22 16L12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"/></svg>
+        </button>
+  <button class="gap-arrow gap-arrow--left hidden" onclick="toggleGaps(44,'card')" title="Back to Blueprint">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M10 16l10-10 1.4 1.4-8.6 8.6 8.6 8.6L20 26z"/></svg>
+        </button>
+  <div class="card-content-wrapper">
+    <div class="card-body" id="card-body-44">
+      <div class="cols4">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Current State &amp; Pain Points</div>
+          <div class="tile-body">
+            <div class="sh">How It Works Today</div><ul><li>Monitors the IBM customer story library and external signals including press releases, case studies, and analyst coverage for new or updated references relevant to defined solution areas and buyer personas. Generates draft customer story summaries in the approved IBM format, routes for customer and legal approval, and surfaces the most relevant references to sellers and field marketers at the point of campaign activation or customer meeting preparation.</li></ul>
+            <div class="sh">Primary Friction Points</div><ul><li>☑ Manual identification and curation: Customer story curation is &#x27;currently reactive and bottlenecked on manual identification and approval cycles&#x27; (screenshot). New stories are not systematically captured.</li><li>☑ Approval cycle delays: Customer and legal approval workflows create bottlenecks between story identification and publication.</li><li>☑ Reference matching at point of need: Sellers and field marketers need the right reference at the right moment (campaign activation, meeting prep) but discovery is manual.</li><li>☐ Library freshness: [NOT DISCUSSED - recommend follow-up] — How stale references are identified and retired was not discussed.</li><li>☐ Coverage gaps: [NOT DISCUSSED - recommend follow-up] — Whether there are known gaps in reference coverage by industry, geography, or solution area.</li><li>☐ Cross-functional coordination: [NOT DISCUSSED - recommend follow-up] — How customer story curation coordinates with analyst relations, PR, and customer success.</li><li>☐ Localization of stories: [NOT DISCUSSED - recommend follow-up] — Whether customer stories need localization for geo markets.</li><li>☐ Seller adoption: [NOT DISCUSSED - recommend follow-up] — How frequently sellers actually use the reference library vs. relying on personal networks.</li><li>☐ Format inconsistency: [NOT DISCUSSED - recommend follow-up] — Whether current stories follow a consistent format or are ad hoc.</li><li>Most Painful Area: Based on the screenshot description, the primary pain is the reactive nature of the function — stories are curated after they&#x27;re needed rather than proactively surfaced. The approval cycle bottleneck compounds this by adding delay between identification and availability. However, this workflow received minimal transcript discussion, and significant discovery is needed to quantify the pain and validate the priority.</li></ul>
+            <div class="sh">Volume / Scale</div><ul><li>Shift the customer story curation function from reactive to proactive, ensuring the reference library stays current with new wins and analyst coverage while reducing the manual curation burden and accelerating seller access to the right reference at the right moment.</li></ul>
+            <div class="sh">Key Stakeholders</div><ul><li>Customer Story and Sales Enablement team — Primary owners of reference library</li><li>Legal / compliance — Approval authority for customer story publication. <span class="risk">[GAP] Who is the legal/compliance contact for customer story approvals? What is the current approval SLA?</span></li><li>Analyst relations — Source of analyst coverage and mentions. <span class="risk">[GAP] Who manages analyst relations and how is analyst coverage currently tracked?</span></li><li>Sellers and field marketers — Reference consumers at point of need</li><li>Named Demand Strategy team — Campaign-level reference matching</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Future State: What AI Does</div>
+          <div class="tile-body">
+            <div class="sh">AI-Enabled Workflow</div><ul><li>Signal Monitoring: Agent monitors internal sources (CRM win notifications, press release queue, customer success reports) and external sources (press coverage, analyst reports, social media) for new or updated customer stories.</li><li>Story Identification &amp; Drafting: Agent identifies stories relevant to defined solution areas and buyer personas. Generates draft summaries in approved IBM format with key talking points, metrics, and use case details. <span class="risk">[GAP] What is the current IBM-approved customer story format and template?</span></li><li>Approval Routing: Agent routes draft stories to customer and legal approval queues with pre-populated approval forms. Tracks approval status and escalates delays.</li><li>Library Update: Approved stories are automatically cataloged in the reference library with metadata tags (industry, solution area, persona, geography, date, metrics).</li><li>Reference Matching: When campaigns are activated or sellers request references, agent matches the most relevant stories based on account context (industry, solution needs, competitive situation) and surfaces them at point of need.</li><li>Freshness Monitoring: Agent flags stories approaching expiration (metrics becoming dated, customer relationship changes) and triggers refresh workflows.</li><li>☑ Insight generation: Agent identifies which customer stories are most relevant to specific accounts, industries, and competitive situations based on contextual matching.</li><li>☑ Drafting / content generation: Core capability. Agent generates draft customer story summaries in approved IBM format from raw inputs (press releases, case studies, win reports). Reduces manual drafting time.</li><li>☑ Risk scoring / pre-review: Flags potential compliance or sensitivity issues before routing for approval (e.g., customer in regulated industry, NDA constraints).</li><li>☑ Executive summarization: Generates summary views of reference library coverage by industry, solution area, and geography — identifies gaps in coverage.</li><li>☑ Workflow automation: Automates the end-to-end story lifecycle from detection through drafting, approval, publication, and retirement.</li><li>Hypothesis: A customer story curation agent would transform the reference function from a reactive, manually maintained library to a proactive, continuously updated intelligence asset. By automatically monitoring for new stories, drafting summaries, managing approvals, and matching references to accounts at point of need, the agent ensures sellers always have current, relevant proof points. The shift from manual identification and bottlenecked approval cycles to automated curation would directly accelerate deal progression in named accounts.</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Business Impact <span class="biz-pill" style="background:#f1c21b;color:#161616">High</span></div>
+          <div class="tile-body">
+            <p class="narr">MODERATE. Accelerates deal progression by ensuring relevant proof points are available at point of need. Directly supports ABM activation (Workflow 3) with account-appropriate references. <span class="risk">[GAP] What is the estimated impact of having timely, relevant customer references on deal close rates?</span></p>
+            <div class="sh">Future Extensions &amp; Reusability</div><ul><li>All MCC domains: Customer story library is a shared asset consumed across all marketing functions</li><li>Sales enablement: Reference matching directly supports seller meeting preparation and proposal development</li><li>Content &amp; Messaging Strategy: Customer stories are a content type that feeds into campaign creation</li><li>C-Suite Experience &amp; ABM: Executive engagement briefings require curated, relevant customer proof points</li><li>Innovation Studio: Client experience demonstrations benefit from current, relevant case studies</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Feasibility (4/5) <span class="biz-pill" style="background:#24a148;color:#fff">High</span></div>
+          <div class="tile-body">
+            <div class="sh">Assessment</div><ul><li>HIGH. Story drafting from structured inputs is a well-suited LLM task. Monitoring external signals is a standard NLP/scraping pattern. Approval routing is standard workflow automation. Reference matching uses established recommendation/search patterns. <span class="risk">[GAP] Are there existing content management APIs that the agent can integrate with for library management?</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot-row">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Technical Requirements</div>
+          <div class="tile-body"><div class="tech-grid">
+            <div><div class="sh">Data Sources</div><ul><li>Customer Story Library: Central repository for approved customer references</li><li>Salesforce: Win notifications, account context for reference matching</li><li>Seismic / Lighthouse: Content distribution to sellers</li><li>Press / Analyst Monitoring: External story signal sources</li><li>Legal / Compliance System: Approval workflow routing</li></ul>
+              <div class="sh">System / Integration Requirements</div><ul><li>Customer Story and Sales Enablement team: Full discovery on current process, systems, and pain points</li><li>Legal / compliance: Understand approval requirements and potential for streamlined review</li><li>Seller advisory group: Understand reference consumption patterns and unmet needs</li></ul>
+            </div>
+            <div><div class="sh">Candidate Vendors / Tools</div><ul><li>New Tech Requirements</li><li>External signal monitoring: Press release, analyst report, and social media monitoring for customer mentions</li><li>Story drafting engine: LLM-based generation of story summaries in IBM-approved format</li></ul>
+              <div class="sh">Other Dependencies &amp; Open Items</div><ul><li>Customer approval: Every story requires customer permission for external use — this is a non-automatable human-in-the-loop step</li><li>Legal review requirements: Compliance review may have mandatory human review requirements that limit automation of the approval stage</li><li>Story format standardization: Agent drafting requires a consistent, well-defined template — if current stories are ad hoc, template standardization is a prerequisite</li><li>External monitoring access: Press and analyst monitoring may require additional tool licensing (Meltwater, etc.)</li><li>CRM data quality: Win notifications from Salesforce depend on opportunity data quality and timely stage updates</li></ul>
+            </div>
+          </div></div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">KPIs &amp; Success Metrics</div>
+          <div class="tile-body kpi-sec">
+            <ul><li>Questions from the Transcript</li><li>(No specific questions were raised about this workflow during the transcript discussion)</li><li>What is the current customer story approval rate — what % of identified stories successfully complete the approval process?</li></ul>
+            <div class="impact-box">
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 0,1 18,35 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Growth Impact</div><div class="imp-desc">All MCC domains: Customer story library is a shared asset consumed across all ma</div></div>
+              </div>
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 1,1 1,18 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Productivity Impact</div><div class="imp-desc">Shift the customer story curation function from reactive to </div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-gaps" id="card-gaps-44" style="display:none">
+      <div class="gaps-header">
+        <div class="gaps-title-row">
+          <span class="gaps-title">Discovery Gaps</span>
+          <span class="gaps-count-pill">14 gaps</span>
+        </div>
+        <div class="gaps-subtitle">All identified gaps for this workflow requiring follow-up investigation or resolution</div>
+      </div>
+      <div class="gaps-table-wrap">
+        <table class="gaps-table">
+          <thead>
+            <tr>
+              <th class="gt-num">#</th>
+              <th class="gt-desc">Gap Description</th>
+              <th class="gt-type">Gap Type</th>
+              <th class="gt-next">Recommended Next Step</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+              <td class="gap-num">1</td>
+              <td class="gap-desc">Who is the legal/compliance contact for customer story approvals? What is the current approval SLA?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">2</td>
+              <td class="gap-desc">Who manages analyst relations and how is analyst coverage currently tracked?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">3</td>
+              <td class="gap-desc">Who currently owns the customer story library? What system/platform hosts it?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">4</td>
+              <td class="gap-desc">What is the current size of the reference library and how frequently are new stories added?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">5</td>
+              <td class="gap-desc">What is the current IBM-approved customer story format and template?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">6</td>
+              <td class="gap-desc">What is the end-to-end process from story identification to seller consumption today?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">7</td>
+              <td class="gap-desc">How many active stories exist and what % are less than 12 months old?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">8</td>
+              <td class="gap-desc">Customer story library platform and ownership not identified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage Sales Enablement to identify library platform, ownership, and current process</td>
+            </tr><tr>
+              <td class="gap-num">9</td>
+              <td class="gap-desc">Current library size and freshness metrics unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Audit reference library for total stories, age distribution, and coverage gaps</td>
+            </tr><tr>
+              <td class="gap-num">10</td>
+              <td class="gap-desc">Legal/compliance approval SLA for customer stories unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Document current approval workflow timeline and identify bottleneck points</td>
+            </tr><tr>
+              <td class="gap-num">11</td>
+              <td class="gap-desc">Analyst relations tracking system not identified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage analyst relations team to understand coverage monitoring tools and processes</td>
+            </tr><tr>
+              <td class="gap-num">12</td>
+              <td class="gap-desc">Seller reference consumption patterns not measured</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Survey sellers on reference library usage, discovery friction, and unmet needs</td>
+            </tr><tr>
+              <td class="gap-num">13</td>
+              <td class="gap-desc">Customer story format standardization status unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Assess current story template consistency and define standard format if needed</td>
+            </tr><tr>
+              <td class="gap-num">14</td>
+              <td class="gap-desc">Content platform used by sellers for reference access not confirmed</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Identify whether Seismic, Lighthouse, or other platform is the primary seller content channel</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" style="background:#002d9c">
+    <span>IBM Consulting / &copy; 2026 IBM Corporation | MCC &amp; IBM Confidential</span>
+    <span>Customer Story and Reference Curation Agent &nbsp;|&nbsp; Workflow Blueprint</span>
+  </div>
+</div><div class="card-panel" id="card-45" style="display:none">
+  <div class="card-header" style="background:#002d9c">
+    <div class="card-title">Campaign Performance Intelligence and Optimization Agent</div>
+    <div class="card-badge">Named Demand Strategy</div>
+    <div class="card-desc">Tracks plan versus actual demand performance on a defined cadence, generates performance summary reports for demand marketers and leadership, identifies underperforming campaign in</div>
+    <div class="card-pill">#5</div>
+  </div>
+  <button class="gap-arrow gap-arrow--right" onclick="toggleGaps(45,'gaps')" title="View Discovery Gaps (10)">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M22 16L12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"/></svg>
+        </button>
+  <button class="gap-arrow gap-arrow--left hidden" onclick="toggleGaps(45,'card')" title="Back to Blueprint">
+          <svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M10 16l10-10 1.4 1.4-8.6 8.6 8.6 8.6L20 26z"/></svg>
+        </button>
+  <div class="card-content-wrapper">
+    <div class="card-body" id="card-body-45">
+      <div class="cols4">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Current State &amp; Pain Points</div>
+          <div class="tile-body">
+            <div class="sh">How It Works Today</div><ul><li>Tracks plan versus actual demand performance on a defined cadence, generates performance summary reports for demand marketers and leadership, identifies underperforming campaign investments using statistical significance thresholds, generates budget reallocation recommendations with supporting rationale, and routes approved reallocations to the relevant campaign and finance systems. Closes the loop between measurement and optimization that currently requires significant manual analysis and multi-stakeholder review cycles.</li></ul>
+            <div class="sh">Primary Friction Points</div><ul><li>☑ Latency between signal and action: Primary pain. &#x27;The latency between performance signal and budget action is a structural constraint in the current model&#x27; (screenshot). By the time underperformance is identified, analyzed, approved, and reallocated, weeks have passed.</li><li>☑ Manual global-geo feedback loops: Priscilla: feedback collection relies on &#x27;meetings and forums and discussions, which is really valuable, but I&#x27;d love to see if there&#x27;s a way we can automate the feedback loop in a real-time way so that it&#x27;s not dependent on emails and meetings.&#x27; IBM culture of extensive meetings compounds this.</li><li>☑ Non-predictive forecasting: Priscilla: IPA forecasts are &#x27;not based on any sort of predictive or AI-enabled methodology, it&#x27;s based on what the person&#x27;s feeling is.&#x27; Forecast accuracy is unmeasured and unimproved.</li><li>☑ Inconsistent optimization methodology: Priscilla: &#x27;many of our teams in the field are highly experienced... but I&#x27;m confident that the way we&#x27;re looking at it in Australia versus Japan versus Spain is very different.&#x27; No standardized optimization framework.</li><li>☑ Campaign utilization visibility: Priscilla: team wants to measure &#x27;adoptability of global campaigns in the field&#x27; and &#x27;successful execution&#x27; but &#x27;some of those things are very logical to talk about but difficult to measure in today&#x27;s world.&#x27;</li><li>☐ Report generation burden: [NOT DISCUSSED - recommend follow-up] — Time spent on manual performance report creation was not quantified.</li><li>☐ Budget reallocation process complexity: [NOT DISCUSSED - recommend follow-up] — Current reallocation approval process and timeline not detailed.</li><li>☐ Attribution data access: David Gerken connected attribution work to these needs but acknowledged it&#x27;s a parallel initiative — not yet integrated into demand strategy workflows.</li><li>☐ New campaign data gap: Shanti: &#x27;when we are launching a new campaign altogether... I don&#x27;t have data backing to really tell them&#x27; whether targeting assumptions are correct. New campaigns lack historical performance baselines.</li><li>Most Painful Area: The combination of manual feedback loops and non-predictive forecasting. Priscilla described a process where global builds campaigns, distributes to geos, and then relies on &#x27;meetings and forums and discussions&#x27; to understand what&#x27;s working — a feedback cycle measured in weeks or months. Meanwhile, the forecasts that inform investment decisions are based on individual judgment rather than data. The result is a system where IBM invests significant budget based on intuition, learns about performance through slow manual channels, and can&#x27;t course-correct quickly. Priscilla&#x27;s vision — &#x27;consistent way of being able to predict the outcome&#x27; — captures the aspiration.</li></ul>
+            <div class="sh">Volume / Scale</div><ul><li>Compress the optimization cycle from weeks to days and increase the frequency at which underperforming investments can be corrected. Transform campaign optimization from a periodic review exercise into a continuous, data-driven reallocation process.</li></ul>
+            <div class="sh">Key Stakeholders</div><ul><li>Claudia Masseo — Campaign strategy, budget ownership</li><li>Priscilla Kim — Global performance oversight, forecast accuracy, feedback loop optimization</li><li>Vanina Marcote — Campaign execution performance</li><li>Vijaysanthi (Shanti) Ramanathan — Market-level campaign performance, India/South Asia</li><li>Sachiko Tsuchiya — Japan market campaign performance</li><li>David Bush and attribution team — Performance measurement methodology. <span class="risk">[GAP] What is David Bush&#x27;s team&#x27;s current attribution model and how is it consumed by demand strategy teams?</span></li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Future State: What AI Does</div>
+          <div class="tile-body">
+            <div class="sh">AI-Enabled Workflow</div><ul><li>Performance Data Ingestion: Agent collects campaign performance data from EPM, CJA, AJO, paid media platforms, and attribution models. Aggregates plan vs. actual metrics across all active campaigns, channels, and geos.</li><li>Statistical Analysis &amp; Signal Detection: Agent applies statistical significance testing to identify campaigns genuinely underperforming vs. normal variance. Flags campaigns crossing defined thresholds.</li><li>Performance Report Generation: Agent generates standardized performance summary reports for demand marketers and leadership with key metrics, trend analysis, and performance vs. plan comparisons.</li><li>Reallocation Recommendation: For underperforming campaigns, agent generates budget reallocation recommendations with supporting rationale — where to shift budget, expected impact, and confidence level based on historical patterns.</li><li>Global-Geo Feedback Synthesis: Agent aggregates performance signals from geos and synthesizes global performance view. Addresses Priscilla&#x27;s desire to &#x27;automate the feedback loop in a real-time way&#x27; between global and markets.</li><li>Approval &amp; Execution Routing: Reallocation recommendations are routed to appropriate approvers based on budget authority levels. Upon approval, adjustments are published to campaign and finance systems.</li><li>Forecast Accuracy Tracking: Agent compares original forecasts to actual outcomes, tracks forecast accuracy over time, and improves predictive models based on observed patterns.</li><li>☑ Insight generation: Core capability. Agent synthesizes performance data across channels, geos, and campaigns to identify optimization opportunities. Generates attribution-informed insights about what&#x27;s working and what&#x27;s not.</li><li>☑ Drafting / content generation: Generates standardized performance reports and reallocation recommendation memos with supporting rationale.</li><li>☑ Anomaly detection: Detects performance anomalies — campaigns performing significantly above or below expectations — and surfaces for investigation.</li><li>☑ Orchestration / routing: Routes reallocation recommendations through approval workflow and publishes approved changes to campaign and finance systems.</li><li>☑ Executive summarization: Generates leadership-ready performance summaries with key metrics, trends, and recommended actions. Addresses Priscilla&#x27;s need for &#x27;real-time feedback&#x27; between global and geos.</li><li>☑ Workflow automation: Automates the manual analysis, report generation, and reallocation recommendation process that currently spans weeks and multiple stakeholder review cycles.</li><li>Hypothesis: A campaign performance optimization agent would close the latency gap between performance signal and budget action that is a structural constraint in the current model. By automating signal detection through statistical analysis, generating reallocation recommendations with rationale, and routing approvals efficiently, the agent would compress the optimization cycle from weeks to days. Priscilla&#x27;s call for predictive outcome forecasting and automated geo-global feedback loops describes exactly what this agent would deliver — a continuous, data-driven optimization engine that replaces periodic manual review.</li><li>Conversational Refinement Note: Priscilla&#x27;s two specific requests — automated feedback loops between global and geos, and predictive outcome forecasting — are both core to this workflow. David Gerken&#x27;s connection to David Bush&#x27;s attribution work provides the data foundation. The agent should be designed to consume attribution outputs as they mature rather than waiting for complete attribution infrastructure.</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Business Impact <span class="biz-pill" style="background:#24a148;color:#fff">High</span></div>
+          <div class="tile-body">
+            <p class="narr">HIGH. Campaign optimization directly impacts marketing ROI. Compressing the optimization cycle means budget shifts to high-performing campaigns faster, reducing waste and increasing marketing contribution to pipeline and revenue. Predictive forecasting improves investment quality.</p>
+            <div class="sh">Future Extensions &amp; Reusability</div><ul><li>All 19 MCC domains: Every domain that runs campaigns benefits from performance optimization</li><li>Select Demand Strategy: Demand Funnel Analyzer workflow has identical performance analysis needs</li><li>PMM domains: Campaign optimization applies to Software, Infrastructure, and Consulting marketing programs</li><li>Attribution / Analytics (David Bush team): Creates a consumption layer for attribution data that benefits the entire attribution investment</li><li>Finance / marketing ROI: Standardized optimization methodology improves marketing&#x27;s credibility in budget discussions</li><li>Leadership reporting: Automated performance summaries reduce the burden of manual leadership update preparation</li></ul>
+          </div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Feasibility (3/5) <span class="biz-pill" style="background:#f1c21b;color:#161616">Medium</span></div>
+          <div class="tile-body">
+            <div class="sh">Assessment</div><ul><li>MODERATE. Performance data exists across multiple platforms requiring integration. Statistical analysis and recommendation generation are standard ML tasks. Attribution data dependency (David Bush team) is the key variable. <span class="risk">[GAP] Is there a unified performance data warehouse or does each platform&#x27;s data need to be separately accessed?</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot-row">
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">Technical Requirements</div>
+          <div class="tile-body"><div class="tech-grid">
+            <div><div class="sh">Data Sources</div><ul><li>EPM: Campaign performance data, historical baselines</li><li>CJA: Customer journey analytics, cross-channel attribution</li><li>AJO: Journey performance metrics</li><li>IPA: Forecast inputs, pipeline predictions</li><li>Tableau: Performance dashboards, reporting</li><li>LinkedIn / Paid Media Platforms: Channel-level performance data</li><li>Marketo: Email campaign performance</li><li>Finance Systems: Budget tracking, reallocation processing</li><li>Attribution Models (David Bush): Cross-channel attribution data</li></ul>
+              <div class="sh">System / Integration Requirements</div><ul><li>David Bush attribution team: Critical dependency — assess attribution data availability, format, and refresh cadence</li><li>Finance stakeholders: Define reallocation approval authority levels and process requirements</li><li>Geo market performance leads: Understand current reporting and feedback processes</li></ul>
+            </div>
+            <div><div class="sh">Candidate Vendors / Tools</div><ul><li>Adobe CJA team: Assess analytics capabilities and data access for performance monitoring</li><li>New Tech Requirements</li><li>Unified performance data layer: Aggregates campaign metrics from EPM, CJA, AJO, paid media, and Marketo</li></ul>
+              <div class="sh">Other Dependencies &amp; Open Items</div><ul><li>Attribution data maturity: David Bush&#x27;s attribution work is the data foundation for predictive forecasting and optimization recommendations — the agent&#x27;s intelligence is bounded by attribution data qu</li><li>Adobe CJA deployment: Full cross-channel analytics depends on CJA maturity and data ingestion from all relevant platforms</li><li>Finance system integration: Automated budget reallocation requires integration with financial systems and compliance with IBM budget governance</li><li>Geo market adoption: Standardized optimization requires buy-in from geos with established performance review practices</li><li>Statistical literacy: Recommendation rationale must be understandable to non-technical stakeholders to drive adoption and approval</li><li>New campaign bootstrap: Predictive models require historical data — new campaign types or markets need a cold-start strategy</li><li>Cross-domain initiative: David Gerken positioned attribution as a cross-domain initiative — this agent must align with that broader effort to avoid duplication</li></ul>
+            </div>
+          </div></div>
+        </div>
+        <div class="tile"><div class="tile-accent"></div>
+          <div class="tile-title">KPIs &amp; Success Metrics</div>
+          <div class="tile-body kpi-sec">
+            <ul><li>Questions from the Transcript</li><li>How can we create a consistent way of predicting campaign outcomes across geos? (Priscilla)</li><li>Can attribution data inform predictive forecasting for events like CFO roundtables? (David Gerken, connecting to David Bush&#x27;s work)</li></ul>
+            <div class="impact-box">
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 1,1 1,18 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Growth Impact</div><div class="imp-desc">All 19 MCC domains: Every domain that runs campaigns benefits from performance o</div></div>
+              </div>
+              <div class="impact-row"><svg class="hb" viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="none" stroke="#002d9c" stroke-width="1.5"/><path d="M18,18 L18,1 A17,17 0 0,1 18,35 Z" fill="#002d9c"/></svg>
+                <div><div class="imp-label">Productivity Impact</div><div class="imp-desc">Compress the optimization cycle from weeks to days and incre</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-gaps" id="card-gaps-45" style="display:none">
+      <div class="gaps-header">
+        <div class="gaps-title-row">
+          <span class="gaps-title">Discovery Gaps</span>
+          <span class="gaps-count-pill">10 gaps</span>
+        </div>
+        <div class="gaps-subtitle">All identified gaps for this workflow requiring follow-up investigation or resolution</div>
+      </div>
+      <div class="gaps-table-wrap">
+        <table class="gaps-table">
+          <thead>
+            <tr>
+              <th class="gt-num">#</th>
+              <th class="gt-desc">Gap Description</th>
+              <th class="gt-type">Gap Type</th>
+              <th class="gt-next">Recommended Next Step</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+              <td class="gap-num">1</td>
+              <td class="gap-desc">What is David Bush&#x27;s team&#x27;s current attribution model and how is it consumed by demand strategy teams?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">2</td>
+              <td class="gap-desc">What is the current budget reallocation approval process and what authority levels are required?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">3</td>
+              <td class="gap-desc">What is the current average time from performance identification to budget action?</td>
+              <td><span class="gap-type-pill gap-type--inline">Inline [GAP]</span></td>
+              <td class="gap-next"></td>
+            </tr><tr>
+              <td class="gap-num">4</td>
+              <td class="gap-desc">David Bush attribution model outputs and accessibility unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Engage attribution team to inventory available data, format, and refresh cadence</td>
+            </tr><tr>
+              <td class="gap-num">5</td>
+              <td class="gap-desc">Finance system for campaign budget management not identified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Document budget management system and integration requirements</td>
+            </tr><tr>
+              <td class="gap-num">6</td>
+              <td class="gap-desc">Unified performance data warehouse existence unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Assess whether a central performance data store exists or needs to be created</td>
+            </tr><tr>
+              <td class="gap-num">7</td>
+              <td class="gap-desc">Current optimization cycle timeline (signal to action) not measured</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Map current process from underperformance detection to budget reallocation with timestamps</td>
+            </tr><tr>
+              <td class="gap-num">8</td>
+              <td class="gap-desc">FTE allocation to performance analysis not quantified</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Gather resource allocation data for performance analysis and reporting functions</td>
+            </tr><tr>
+              <td class="gap-num">9</td>
+              <td class="gap-desc">IPA tool ability to accept agent-generated inputs unknown</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Assess IPA technical architecture for integration feasibility</td>
+            </tr><tr>
+              <td class="gap-num">10</td>
+              <td class="gap-desc">Budget reallocation approval authority levels not documented</td>
+              <td><span class="gap-type-pill gap-type--summary">Gap Summary</span></td>
+              <td class="gap-next">Map budget governance structure with authority thresholds</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" style="background:#002d9c">
+    <span>IBM Consulting / &copy; 2026 IBM Corporation | MCC &amp; IBM Confidential</span>
+    <span>Campaign Performance Intelligence and Optimization Agent &nbsp;|&nbsp; Workflow Blueprint</span>
+  </div>
 </div>
   </div>
 </div>
@@ -7278,7 +8130,8 @@ var interviewOrder=[
   'PMM',
   'MMAPI Analytics',
   'Ecosystems',
-  'Events Marketing'
+  'Events Marketing',
+  'Named Demand Strategy'
 ];
 
 function getDomainName(section){
