@@ -35,11 +35,22 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 .sb-head{padding:1.125rem 1rem 0.875rem;border-bottom:1px solid rgba(255,255,255,.1)}
 .sb-title{font-size:1rem;font-weight:600;color:#fff}
 .sb-sub{font-size:.6875rem;color:#8d8d8d;margin-top:2px}
-.sb-stats{display:flex;gap:1rem;margin-top:.5rem;font-size:.6875rem;color:#8d8d8d}
+.sb-bottom-row{display:flex;align-items:center;justify-content:space-between;margin-top:.5rem}
+.sb-stats{display:flex;gap:1rem;font-size:.6875rem;color:#8d8d8d}
 .sb-stats span{color:#78a9ff;font-weight:600}
 .sb-nav{flex:1;overflow-y:auto;padding:4px 0}
 .sb-nav::-webkit-scrollbar{width:4px}
 .sb-nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:2px}
+
+/* Sort Toggle */
+.sb-sort{display:flex;align-items:center;gap:2px}
+.sb-sort-btn{background:none;border:none;color:#6f6f6f;cursor:pointer;padding:5px 7px;border-radius:4px;transition:all .15s;display:flex;align-items:center;justify-content:center;position:relative}
+.sb-sort-btn:hover{background:rgba(255,255,255,.08);color:#c6c6c6}
+.sb-sort-btn.active{color:#78a9ff}
+.sb-sort-btn svg{display:block}
+.sb-sort-divider{width:1px;height:18px;background:rgba(255,255,255,.12);margin:0 4px}
+.sb-sort-btn .sort-tooltip{position:fixed;z-index:9999;background:#262626;color:#f4f4f4;font-size:.625rem;font-family:'IBM Plex Sans',sans-serif;padding:4px 8px;border-radius:2px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s}
+.sb-sort-btn:hover .sort-tooltip{opacity:1}
 
 .domain-section{border-bottom:1px solid rgba(255,255,255,.06)}
 .domain-list{overflow:hidden;transition:max-height .3s ease, opacity .25s ease;opacity:1}
@@ -181,7 +192,20 @@ ul li::before{content:'\2022';position:absolute;left:0;color:#002d9c}
     <div class="sb-head">
       <div class="sb-title">Workflow Blueprints</div>
       <div class="sb-sub">AI Transformation — All Domains</div>
-      <div class="sb-stats"><div><span>10</span> Domains</div><div><span>41</span> Workflows</div></div>
+      <div class="sb-bottom-row">
+        <div class="sb-stats"><div><span>10</span> Domains</div><div><span>41</span> Workflows</div></div>
+        <div class="sb-sort">
+          <button class="sb-sort-btn active" id="sortInterview" onclick="sortDomains('interview')" title="Interview order">
+            <span class="sort-tooltip">Interview Order</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><text x="1" y="8" font-size="7" font-weight="700" fill="currentColor" font-family="IBM Plex Sans,sans-serif">0</text><text x="1" y="16" font-size="7" font-weight="700" fill="currentColor" font-family="IBM Plex Sans,sans-serif">9</text><path d="M13 4v9m0 0l-2.5-2.5M13 13l2.5-2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="sb-sort-divider"></div>
+          <button class="sb-sort-btn" id="sortAlpha" onclick="toggleAlpha()" title="Alphabetical">
+            <span class="sort-tooltip">Alphabetical A-Z</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><text x="1" y="8" font-size="7" font-weight="700" fill="currentColor" font-family="IBM Plex Sans,sans-serif">A</text><text x="1" y="16" font-size="7" font-weight="700" fill="currentColor" font-family="IBM Plex Sans,sans-serif">Z</text><path class="sort-arrow-down" d="M13 4v9m0 0l-2.5-2.5M13 13l2.5-2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path class="sort-arrow-up" d="M13 14V5m0 0l-2.5 2.5M13 5l2.5 2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:none"/></svg>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="sb-nav"><div class="domain-section">
       <div class="domain-hdr" style="border-left-color:#001d6c" onclick="toggleDomain(this)">
@@ -7241,6 +7265,97 @@ function toggleGaps(idx,view){
   }
   document.getElementById('main').scrollTop=0;
 }
+
+/* Sort domains */
+var interviewOrder=[
+  'C-Suite & ABM',
+  'Innovation Studio',
+  'T&O',
+  'IBMer Comms',
+  'CSR',
+  'Intl. & Ext. Comms',
+  'Select Demand',
+  'PMM',
+  'MMAPI Analytics',
+  'Ecosystems',
+  'Events Marketing'
+];
+
+function getDomainName(section){
+  return section.querySelector('.domain-hdr__name').textContent.trim();
+}
+
+var alphaAsc=true;
+
+function sortDomains(mode){
+  var nav=document.querySelector('.sb-nav');
+  var sections=Array.from(nav.querySelectorAll('.domain-section'));
+  var btnInterview=document.getElementById('sortInterview');
+  var btnAlpha=document.getElementById('sortAlpha');
+
+  btnInterview.classList.remove('active');
+  btnAlpha.classList.remove('active');
+
+  if(mode==='alpha'){
+    sections.sort(function(a,b){ return getDomainName(a).localeCompare(getDomainName(b)); });
+    btnAlpha.classList.add('active');
+    alphaAsc=true;
+    updateAlphaArrow();
+  }else if(mode==='alpha-desc'){
+    sections.sort(function(a,b){ return getDomainName(b).localeCompare(getDomainName(a)); });
+    btnAlpha.classList.add('active');
+    alphaAsc=false;
+    updateAlphaArrow();
+  }else{
+    sections.sort(function(a,b){
+      var ai=interviewOrder.indexOf(getDomainName(a)); if(ai===-1) ai=999;
+      var bi=interviewOrder.indexOf(getDomainName(b)); if(bi===-1) bi=999;
+      return ai-bi;
+    });
+    btnInterview.classList.add('active');
+  }
+  sections.forEach(function(s){ nav.appendChild(s); });
+}
+
+function toggleAlpha(){
+  var btnAlpha=document.getElementById('sortAlpha');
+  if(btnAlpha.classList.contains('active')){
+    /* Already in alpha mode — flip direction */
+    sortDomains(alphaAsc ? 'alpha-desc' : 'alpha');
+  }else{
+    sortDomains('alpha');
+  }
+}
+
+function updateAlphaArrow(){
+  var btn=document.getElementById('sortAlpha');
+  var downArrow=btn.querySelector('.sort-arrow-down');
+  var upArrow=btn.querySelector('.sort-arrow-up');
+  var tooltip=btn.querySelector('.sort-tooltip');
+  if(alphaAsc){
+    downArrow.style.display='';
+    upArrow.style.display='none';
+    tooltip.textContent='Alphabetical A-Z';
+  }else{
+    downArrow.style.display='none';
+    upArrow.style.display='';
+    tooltip.textContent='Alphabetical Z-A';
+  }
+}
+
+/* Apply interview order on load */
+sortDomains('interview');
+
+/* Position tooltips with fixed positioning */
+document.querySelectorAll('.sb-sort-btn').forEach(function(btn){
+  btn.addEventListener('mouseenter',function(){
+    var tip=btn.querySelector('.sort-tooltip');
+    if(!tip) return;
+    var r=btn.getBoundingClientRect();
+    tip.style.top=(r.top - tip.offsetHeight - 6)+'px';
+    tip.style.left=(r.left + r.width/2 - tip.offsetWidth/2)+'px';
+  });
+});
 </script>
 </body>
 </html>
